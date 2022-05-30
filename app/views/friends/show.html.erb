@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-content">
+
+    <div class="title">
+      <%= @friend.first_name%>
+      <%= @friend.last_name%>
+    </div>
+
+    <div class="subtitle">
+      @<%= @friend.twitter%>
+    </div>
+
+    <div class="content">
+      <strong>Email:</strong>
+      <%= @friend.email%>
+      </br>
+      <strong>Phone:</strong>
+      <%= @friend.phone%>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+</br>
+
+<div class="field is-grouped">
+  <p class="control">
+    <%= link_to "Edit this friend", edit_friend_path(@friend), class:"button is-link"%>
+  </p>
+  <p class="control">
+    <%= link_to "Back to friends", friends_path, class:"button" %>
+  </p>
+  <p class="control">
+    <%= button_to "Destroy this friend", @friend, method: :delete, class:"button is-danger" %>
+  </p>
+</div>
+
