@@ -1,11 +1,13 @@
 <table class="table is-striped is-hoverable is-fullwidth is-bordered">
   <thead>
     <tr>
-      <th>Frist Name</th>
+      <th>First Name</th>
       <th>Last Name</th>
       <th>Email</th>
       <th>Phone</th>
-      <th>Twitter</th>
+      <th>Issue Description</th>
+      <th>Created Date</th>
+      <th>Update Date</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +22,9 @@
         <td><%= friend.email%></td>
         <td><%= friend.phone%></td>
         <td><%= friend.twitter%></td>
+        <td><%= friend.created_at%></td>
+        <td><%= friend.updated_at%></td>
+
 
         <td><%= link_to "Show", friend %></td>
         <td><%= link_to "Edit", edit_friend_path(friend) %></td>
@@ -31,5 +36,9 @@
 
 </table>
 
-<%= link_to "New friend", new_friend_path, class:"button is-success" %>
+<% if user_signed_in? %>
+
+<%= link_to "New ticket", new_friend_path, class:"button is-success" %>
+
+<% end %>
 

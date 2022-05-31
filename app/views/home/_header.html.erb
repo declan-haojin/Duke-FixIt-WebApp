@@ -1,7 +1,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
-      <img src="https://cdn.jsdelivr.net/gh/declan-haojin/blog-image//duke/Haojin's Blog Logo.png" width="112" height="28">
+      <img src="https://cdn.jsdelivr.net/gh/declan-haojin/blog-image//duke/FixIt-logo.png" width="130" height="30">
     </a>
 
   </div>
@@ -11,10 +11,10 @@
 
 
 
-        <%= link_to 'Friend App', root_path, class:"navbar-item" %>
-        <%= link_to 'Friends', friends_path, class:"navbar-item"%>
+        <%= link_to 'Home', root_path, class:"navbar-item" %>
+        <%= link_to 'Reparing Tickets', friends_path, class:"navbar-item"%>
         <% if user_signed_in? %>
-          <%= link_to 'New Friend', new_friend_path, class:"navbar-item"%>
+          <%= link_to 'New Ticket', new_friend_path, class:"navbar-item"%>
         <% end %>
         <%= link_to 'About Us', home_about_path, class:"navbar-item"%>
 
@@ -25,8 +25,8 @@
         <div class="buttons">
 
             <% if user_signed_in? %>
+            <%= link_to 'Profile', edit_user_registration_path, class:"button is-primary"%>
               <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class:"button is-light"%>
-              <%= link_to 'Profile', edit_user_registration_path, class:"button is-light"%>
             <% else %>
               <%= link_to 'Sign up', new_user_registration_path, class:"button is-primary"%>
               <%= link_to 'Log in', new_user_session_path, class:"button is-light"%>

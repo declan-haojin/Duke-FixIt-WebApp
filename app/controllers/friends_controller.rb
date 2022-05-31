@@ -3,7 +3,7 @@ class FriendsController < ApplicationController
 
   # GET /friends or /friends.json
   def index
-    @friends = Friend.all
+    @friends = Friend.all.sort_by {|friend| friend.created_at}.reverse
   end
 
   # GET /friends/1 or /friends/1.json
