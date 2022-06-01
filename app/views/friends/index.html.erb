@@ -22,8 +22,8 @@
         <td><%= friend.email%></td>
         <td><%= friend.phone%></td>
         <td><%= friend.twitter%></td>
-        <td><%= friend.created_at%></td>
-        <td><%= friend.updated_at%></td>
+        <td><%= friend.created_at.strftime('%m-%d-%Y')%></td>
+        <td><%= friend.updated_at.strftime('%m-%d-%Y')%></td>
 
 
         <td><%= link_to "Show", friend %></td>
