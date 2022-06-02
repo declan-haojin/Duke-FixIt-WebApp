@@ -1,4 +1,11 @@
-<table class="table is-striped is-hoverable is-fullwidth is-bordered">
+<div class="container is-fluid">
+<div class="card">
+
+  <div class="card-content">
+  <div class="title">Tickets</div>
+  <br />
+  <div class="table-container">
+<table class="table is-striped is-hoverable is-fullwidth">
   <thead>
     <tr>
       <th>First Name</th>
@@ -35,10 +42,15 @@
   </tbody>
 
 </table>
-
 <% if user_signed_in? %>
 
 <%= link_to "New ticket", new_friend_path, class:"button is-success" %>
 
 <% end %>
+</div>
+</div>
+</div>
+</div>
+
+
 

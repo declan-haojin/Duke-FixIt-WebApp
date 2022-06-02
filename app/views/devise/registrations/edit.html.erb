@@ -1,3 +1,6 @@
+<div class="container is-fluid">
+<div class="card">
+  <div class="card-content">
 <div class="title">Edit <%= resource_name.to_s.humanize %></div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -54,21 +57,27 @@
   </div>
 
 
+</div>
+</div>
+
 
 <% end %>
 
 <br />
 <br />
 
+
+
 <div class="card">
   <div class="card-content">
-    <div class="subtitle">Unhappy? Cancel my account</div>
+    <div class="subtitle"><strong>Unhappy? Cancel my account</strong></div>
     <div class="content">
       <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"button is-danger" %>
     </div>
   </div>
 </div>
 
+</div>
 
 <br />
 

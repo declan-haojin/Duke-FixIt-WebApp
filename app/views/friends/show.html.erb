@@ -1,3 +1,4 @@
+<div class="container is-fluid">
 <div class="card">
   <div class="card-content">
 
@@ -16,7 +17,7 @@
 
       <div class="notification is-primary is-light">
       <h2>Issue:</h2>
-        @<%= @friend.twitter%>
+        <%= @friend.twitter%>
       </div>
 
       </div>
@@ -25,14 +26,15 @@
 <br/>
 <div class="field is-grouped">
   <p class="control">
-    <%= link_to "Edit this friend", edit_friend_path(@friend), class:"button is-link"%>
+    <%= link_to "Edit this ticket", edit_friend_path(@friend), class:"button is-link"%>
   </p>
   <p class="control">
-    <%= link_to "Back to friends", friends_path, class:"button" %>
+    <%= link_to "Back to lists", friends_path, class:"button" %>
   </p>
   <p class="control">
-    <%= button_to "Destroy this friend", @friend, method: :delete, class:"button is-danger" %>
+    <%= button_to "Delete", @friend, method: :delete, class:"button is-danger" %>
   </p>
+</div>
 </div>
 </div>
 

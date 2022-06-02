@@ -56,3 +56,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "ruby-lsp", "~> 0.0.3", :group => :development
